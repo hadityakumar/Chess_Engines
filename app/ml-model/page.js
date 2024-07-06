@@ -1,11 +1,13 @@
 'use client'
 import 'react-toastify/dist/ReactToastify.css';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Chessboard from 'chessboardjsx';
+import dynamic from 'next/dynamic';
 import { Chess } from 'chess.js';
 import { ToastContainer, toast } from 'react-toastify';
 
+// Dynamically import Chessboard to ensure it runs only on the client side
+const Chessboard = dynamic(() => import('chessboardjsx'), { ssr: false });
 
 const App = () => {
     const newGame = new Chess();
@@ -13,6 +15,23 @@ const App = () => {
     const [fen, setFen] = useState('start');
     const [gameover, setGameover] = useState(false);
     const [winner, setWinner] = useState(null);
+    const [boardWidth, setBoardWidth] = useState(560); // Default width for large screens
+
+    useEffect(() => {
+        // Update board width based on window size
+        const updateBoardWidth = () => {
+            setBoardWidth(window.innerWidth < 768 ? 340 : 560);
+        };
+
+        // Set initial board width
+        updateBoardWidth();
+
+        // Add resize event listener
+        window.addEventListener('resize', updateBoardWidth);
+
+        // Clean up the event listener on unmount
+        return () => window.removeEventListener('resize', updateBoardWidth);
+    }, []);
 
     const resetGame = () => {
         game.reset();
@@ -74,18 +93,15 @@ const App = () => {
     return (
         <>
             <div className="flex font-[montserrat] font-extrabold justify-between">
-
                 <div className='w-[30%] flex flex-col items-center p-10 gap-5'>
                     <span className='text-black text-xl'>Hi, I am a Machine Learning Model!</span>
                     <span className='text-black text-lg'>I was trained with 60,000 different chess positions.</span>
-
                     <span className='text-gray-700 text-lg'>What is a ML Model?</span>
                     <span className='text-gray-700'>This Machine learning model, built using TensorFlow Keras, processes chess board positions (FEN strings) and predicts the best possible move by evaluating all potential future states of the board.</span>
                     <a className='text-blue-800' href="https://www.kaggle.com/code/adityakumar2003/chess-ai">Link to Code</a>
                 </div>
 
                 <div className='flex flex-col items-center md:p-1 md:m-4'>
-
                     {gameover && (
                         <div style={{
                             width: '100%',
@@ -104,11 +120,11 @@ const App = () => {
                         </div>
                     )}
 
-                    <div className=" md:shadow-2xl md:w-auto">
+                    <div className="md:shadow-2xl md:w-auto">
                         <div className="w-[340px] md:w-[560px]">
                             <Chessboard
                                 position={fen}
-                                width={window.innerWidth < 768 ? 340 : 560}
+                                width={boardWidth}
                                 onDrop={({ sourceSquare, targetSquare }) => {
                                     if (!gameover && sourceSquare !== targetSquare) {
                                         handleMove({ from: sourceSquare, to: targetSquare, promotion: 'q' });
@@ -117,7 +133,6 @@ const App = () => {
                             />
                         </div>
                     </div>
-
 
                     <ToastContainer />
                 </div>
@@ -128,18 +143,8 @@ const App = () => {
                     </button>
                 </div>
             </div>
-
         </>
     );
 };
 
 export default App;
-
-
-
-
-
-
-
-
-
