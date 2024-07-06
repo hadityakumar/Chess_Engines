@@ -1,5 +1,7 @@
 # Chess Engines
 
+https://chessengines.vercel.app/
+
 Chess Engines is a web application built using Next.js for the frontend and Node.js with Express for the backend. The application features three different chess engines:
 
 1. **Random Chess**: Selects moves randomly.
@@ -33,7 +35,8 @@ Chess Engines is a web application built using Next.js for the frontend and Node
 │   ├── ml-model.js
 │   └── _app.js
 └── public
-    ├── (icons.svg)
+    ├── horse.svg
+    └── github.png
 ```
 
 ## Installation
@@ -67,6 +70,10 @@ Chess Engines is a web application built using Next.js for the frontend and Node
 1. Open the application in your browser.
 2. Select one of the modes (Random Chess, Stockfish Engine, ML Model) from the homepage.
 3. Play chess and see the best move suggested by the selected engine.
+
+## Deployment
+
+This project is deployed on Vercel. You can access it [here](https://chessengines.vercel.app/).
 
 ## Links
 
