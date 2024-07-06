@@ -1,36 +1,85 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Chess Engines
 
-## Getting Started
+Chess Engines is a web application built using Next.js for the frontend and Node.js with Express for the backend. The application features three different chess engines:
 
-First, run the development server:
+1. **Random Chess**: Selects moves randomly.
+2. **Stockfish Engine**: Utilizes the Stockfish module and binary file to find the best move.
+3. **ML Model**: Uses a TensorFlow Keras trained model to predict the best move.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Features
+
+- **Next.js** for the frontend.
+- **Node.js and Express** for the backend.
+- **Python APIs** to interface with different chess engines.
+- **Three Modes**:
+  - Random Chess: Randomly selects legal moves.
+  - Stockfish Engine: Uses the powerful Stockfish chess engine.
+  - ML Model: Trained on 60,000 chess positions to predict the best move using TensorFlow Keras.
+
+## Project Structure
+
+```
+.
+├── backend
+│   ├── chess_random_engine.py
+│   ├── stockfish_engine.py
+│   ├── ml_model.py
+│   ├── server.js
+│   └── requirements.txt
+├── pages
+│   ├── index.js
+│   ├── random.js
+│   ├── stockfish.js
+│   ├── ml-model.js
+│   └── _app.js
+└── public
+    ├── (icons.svg)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Installation
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+1. Clone the repository:
+    ```sh
+    git clone <repository-url>
+    cd chess-engines
+    ```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+2. Install dependencies:
+    ```sh
+    yarn install
+    cd backend
+    pip install -r requirements.txt
+    ```
 
-## Learn More
+3. Run the application:
+    ```sh
+    yarn dev
+    ```
 
-To learn more about Next.js, take a look at the following resources:
+4. Set up the backend server:
+    ```sh
+    cd backend
+    node server.js
+    ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Usage
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+1. Open the application in your browser.
+2. Select one of the modes (Random Chess, Stockfish Engine, ML Model) from the homepage.
+3. Play chess and see the best move suggested by the selected engine.
 
-## Deploy on Vercel
+## Links
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- [Link to Jupyter Notebook for ML Model](https://www.kaggle.com/code/adityakumar2003/chess-ai)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## License
+
+This project is licensed under the MIT License.
+
+## Contributing
+
+Contributions are welcome! Please fork this repository and submit a pull request for any changes.
+
+## Contact
+
+For any inquiries, please reach out to [hadityakumar](https://www.linkedin.com/in/hadityakumar/).
