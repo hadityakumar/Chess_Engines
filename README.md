@@ -18,6 +18,14 @@ Chess Engines is a web application built using Next.js for the frontend and Node
   - Stockfish Engine: Uses the powerful Stockfish chess engine.
   - ML Model: Trained on 60,000 chess positions to predict the best move using TensorFlow Keras.
 
+## Tech Stack
+
+![Next.js](https://img.shields.io/badge/Next.js-black?style=for-the-badge&logo=next.js)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![Express](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
+
 ## Project Structure
 
 ```
@@ -90,3 +98,7 @@ Contributions are welcome! Please fork this repository and submit a pull request
 ## Contact
 
 For any inquiries, please reach out to [hadityakumar](https://www.linkedin.com/in/hadityakumar/).
+
+---
+
+Feel free to adjust the icons and links as needed. This README should now be more attractive and informative.
