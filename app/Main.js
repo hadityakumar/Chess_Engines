@@ -7,7 +7,7 @@ const App = () => {
         <>
             <title>Chess Engines</title>
             <meta name="Chess Engines" content="Play against different Chess Engines" />
-            <link rel="icon" href="/horse.svg" />
+            <link rel="icon" href="favicon.ico" />
             <meta charSet="UTF-8" />
             <meta name="description"
                 content="NextJS Head component" />
