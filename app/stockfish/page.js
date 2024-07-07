@@ -63,7 +63,7 @@ const App = () => {
             }
 
             const fen = game.fen();
-            const response = await axios.post('http://localhost:5000/stockfish_move', { fen });
+            const response = await axios.post('https://chess-server1.azurewebsites.net/stockfish_move', { fen });
             const bestMove = response.data.bestMove;
             const bestMoveObject = convertMove(bestMove);
             game.move(bestMoveObject);
