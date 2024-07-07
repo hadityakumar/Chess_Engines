@@ -10,7 +10,7 @@ const App = () => {
             <link rel="icon" href="favicon.ico" />
             <meta charSet="UTF-8" />
             <meta name="description"
-                content="NextJS Head component" />
+                content="Play against different Chess Engines" />
             <meta name="keywords"
                 content="HTML, CSS, JavaScript, NextJS" />
             <meta name="author"
