@@ -17,6 +17,9 @@ Chess Engines is a web application built using Next.js for the frontend and Node
   - Random Chess: Randomly selects legal moves.
   - Stockfish Engine: Uses the powerful Stockfish chess engine.
   - ML Model: Trained on 60,000 chess positions to predict the best move using TensorFlow Keras.
+- **Docker** for containerization.
+- **Azure** for deployment.
+- **Flask** for the backend API.
 
 ## Tech Stack
 
@@ -25,6 +28,10 @@ Chess Engines is a web application built using Next.js for the frontend and Node
 ![Express](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Azure](https://img.shields.io/badge/Microsoft_Azure-0089D6?style=for-the-badge&logo=microsoft-azure&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
+
 
 ## Project Structure
 
@@ -46,6 +53,7 @@ Chess Engines is a web application built using Next.js for the frontend and Node
     ├── horse.svg
     └── github.png
 ```
+
 
 ## Installation
 
@@ -86,6 +94,7 @@ This project is deployed on Vercel. You can access it [here](https://chessengine
 ## Links
 
 - [Link to Jupyter Notebook for ML Model](https://www.kaggle.com/code/adityakumar2003/chess-ai)
+- [Backend Repository](https://github.com/hadityakumar/Chess_server_flask)
 
 ## License
 
@@ -100,5 +109,3 @@ Contributions are welcome! Please fork this repository and submit a pull request
 For any inquiries, please reach out to [hadityakumar](https://www.linkedin.com/in/hadityakumar/).
 
 ---
-
-Feel free to adjust the icons and links as needed. This README should now be more attractive and informative.
