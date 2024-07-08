@@ -14,7 +14,7 @@ const App = () => {
     const [fen, setFen] = useState('start');
     const [gameover, setGameover] = useState(false);
     const [winner, setWinner] = useState(null);
-    const [boardWidth, setBoardWidth] = useState(560); 
+    const [boardWidth, setBoardWidth] = useState(560);
 
     useEffect(() => {
         const updateBoardWidth = () => {
@@ -88,10 +88,10 @@ const App = () => {
         <>
             <div className="flex flex-col md:flex-row font-[montserrat] font-extrabold justify-between items-center md:items-start md:p-5 p-1">
                 <div className='w-full md:w-[30%] flex flex-col items-center md:p-5 p-1 gap-5'>
-                    <span className='text-black md:text-xl text-base text-center'>Hello I am Random AI !</span>
-                    <span className='text-black md:text-lg text-sm text-center'>I play random moves</span>
-                    <span className='text-gray-700 md:text-lg text-base text-center'>How I work?</span>
-                    <span className='text-gray-700 md:text-base text-sm text-center'>I find all possible legal moves at a particular position and choose any one of them using RNG (Random Number Generator)</span>
+                    <span className='text-black md:text-xl text-base text-center'>Hello, I am Random AI!</span>
+                    <span className='text-black md:text-lg text-sm text-center'>I play random moves.</span>
+                    <span className='text-gray-700 md:text-lg text-base text-center'>How do I work?</span>
+                    <span className='text-gray-700 md:text-base text-sm text-center'>I find all possible legal moves at a particular position and choose any one of them using RNG (Random Number Generator).</span>
                 </div>
 
                 <div className='flex flex-col items-center md:p-1 md:m-4 relative'>
