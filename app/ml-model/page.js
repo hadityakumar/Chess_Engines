@@ -93,13 +93,13 @@ const App = () => {
 
     return (
         <>
-            <div className="flex flex-col md:flex-row font-[montserrat] font-extrabold justify-between items-center md:items-start md:p-5 p-1">
+            <div className="flex flex-col md:flex-row font-[montserrat] font-extrabold justify-between items-center md:items-start md:p-5">
                 <div className='w-full md:w-[30%] flex flex-col items-center md:p-5 gap-5 p-1'>
-                    <span className='text-black md:text-xl text-base text-center'>Hi, I am a Machine Learning Model!</span>
+                    <span className='text-black md:text-xl text- text-center'>Hi, I am a Machine Learning Model!</span>
                     <span className='text-black md:text-lg text-sm text-center'>I was trained with 60,000 different chess positions.</span>
-                    <span className='text-gray-700 md:text-lg text-base text-center'>What is a ML Model?</span>
+                    <span className='text-gray-700 md:text-lg text-center'>What is a ML Model?</span>
                     <span className='text-gray-700 md:text-base text-sm text-center'>This Machine learning model, built using TensorFlow Keras, processes chess board positions (FEN strings) and predicts the best possible move by evaluating all potential future states of the board.</span>
-                    <a className='text-blue-800' href="https://www.kaggle.com/code/adityakumar2003/chess-ai">Link to Code</a>
+                    <a className='text-blue-800 text-sm' href="https://www.kaggle.com/code/adityakumar2003/chess-ai">Link to Code</a>
                 </div>
 
                 <div className='flex flex-col items-center md:p-1 md:m-4 relative'>
