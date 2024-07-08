@@ -52,7 +52,7 @@ const App = () => {
 
     const handleMove = async (move) => {
         try {
-            if(game.turn()==='b')   return;
+            if (game.turn() === 'b') return;
             const moveResult = game.move(move);
             if (moveResult === null) return;
             setFen(game.fen());
@@ -94,12 +94,12 @@ const App = () => {
     return (
         <>
             <div className="flex flex-col md:flex-row font-[montserrat] font-extrabold justify-between items-center md:items-start md:p-5">
-                <div className='w-full md:w-[30%] flex flex-col items-center md:p-5 gap-5 p-1'>
-                    <span className='text-black md:text-xl text- text-center'>Hi, I am a Machine Learning Model!</span>
-                    <span className='text-black md:text-lg text-sm text-center'>I was trained with 60,000 different chess positions.</span>
-                    <span className='text-gray-700 md:text-lg text-center'>What is a ML Model?</span>
+                <div className='w-full md:w-[30%] flex flex-col items-center md:p-5 gap-5 p-4'>
+                    <span className='text-black md:text-xl text-lg text-center'>Hi, I am a Machine Learning Model!</span>
+                    <span className='text-black md:text-lg text-base text-center'>I was trained with 60,000 different chess positions.</span>
+                    <span className='text-gray-700 md:text-lg text-base text-center'>What is a ML Model?</span>
                     <span className='text-gray-700 md:text-base text-sm text-center'>This Machine learning model, built using TensorFlow Keras, processes chess board positions (FEN strings) and predicts the best possible move by evaluating all potential future states of the board.</span>
-                    <a className='text-blue-800 text-sm' href="https://www.kaggle.com/code/adityakumar2003/chess-ai">Link to Code</a>
+                    <a className='text-blue-800 text-base text-sm text-nowrap' href="https://www.kaggle.com/code/adityakumar2003/chess-ai">Link to Code</a>
                 </div>
 
                 <div className='flex flex-col items-center md:p-1 md:m-4 relative'>
@@ -121,7 +121,7 @@ const App = () => {
                         </div>
                     )}
 
-                    <div className="md:shadow-2xl md:w-auto">
+                    <div className="md:shadow-2xl md:w-auto mt-2">
                         <div className="w-[340px] md:w-[560px]">
                             <Chessboard
                                 position={fen}
@@ -139,7 +139,7 @@ const App = () => {
                 </div>
 
                 <div className='w-full md:w-[30%] flex justify-center items-center mt-5 md:mt-0'>
-                    <button onClick={resetGame} className="mt-2 font-[montserrat] md:text-xl text-sm shadow-lg bg-[#a36634] hover:bg-[#5a3a1f] text-white font-bold p-4 border-b-4 border-[#a36634] hover:border-[#5a3a1f] rounded-full hover:shadow-2xl">
+                    <button onClick={resetGame} className="mt-2 font-[montserrat] md:text-xl text-lg shadow-lg bg-[#a36634] hover:bg-[#5a3a1f] text-white font-bold p-4 border-b-4 border-[#a36634] hover:border-[#5a3a1f] rounded-full hover:shadow-2xl">
                         New Game
                     </button>
                 </div>

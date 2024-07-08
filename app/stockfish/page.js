@@ -125,7 +125,7 @@ const App = () => {
                         </div>
                     )}
 
-                    <div className="md:shadow-2xl md:w-auto">
+                    <div className="md:shadow-2xl md:w-auto mt-2">
                         <div className="w-[340px] md:w-[560px]">
                             <Chessboard
                                 position={fen}
