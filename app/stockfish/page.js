@@ -52,6 +52,7 @@ const App = () => {
 
     const handleMove = async (move) => {
         try {
+            if(game.turn()==='b')   return;
             const moveResult = game.move(move);
             if (moveResult === null) return;
             setFen(game.fen());
@@ -97,15 +98,15 @@ const App = () => {
 
     return (
         <>
-            <div className="flex font-[montserrat] font-extrabold justify-between">
-                <div className='w-[30%] flex flex-col items-center p-10 gap-5'>
-                    <span className='text-black text-xl'>Hello I am StockFish Chess Engine !</span>
-                    <span className='text-black text-lg'>I am integrated with the Stockfish python module.</span>
-                    <span className='text-gray-700 text-lg'>What is StockFish?</span>
-                    <span className='text-gray-700'>Stockfish is a powerful open-source chess engine known for its strong positional play and tactical prowess, used widely in competitive chess and analysis. It evaluates millions of positions per second to suggest optimal moves based on complex algorithms and deep calculation.</span>
+            <div className="flex flex-col md:flex-row font-[montserrat] font-extrabold justify-between items-center md:items-start p-5">
+                <div className='w-full md:w-[30%] flex flex-col items-center p-5 gap-5'>
+                    <span className='text-black text-xl text-center'>Hello I am StockFish Chess Engine!</span>
+                    <span className='text-black text-lg text-center'>I am integrated with the Stockfish python module.</span>
+                    <span className='text-gray-700 text-lg text-center'>What is StockFish?</span>
+                    <span className='text-gray-700 text-center'>Stockfish is a powerful open-source chess engine known for its strong positional play and tactical prowess, used widely in competitive chess and analysis. It evaluates millions of positions per second to suggest optimal moves based on complex algorithms and deep calculation.</span>
                 </div>
 
-                <div className='flex flex-col items-center md:p-1 md:m-4'>
+                <div className='flex flex-col items-center md:p-1 md:m-4 relative'>
                     {gameover && (
                         <div style={{
                             width: '100%',
@@ -141,7 +142,7 @@ const App = () => {
                     <ToastContainer />
                 </div>
 
-                <div className='w-[30%] flex justify-center items-center'>
+                <div className='w-full md:w-[30%] flex justify-center items-center mt-5 md:mt-0'>
                     <button onClick={resetGame} className="mt-2 font-[montserrat] md:text-xl text-sm shadow-lg bg-[#a36634] hover:bg-[#5a3a1f] text-white font-bold p-4 border-b-4 border-[#a36634] hover:border-[#5a3a1f] rounded-full hover:shadow-2xl">
                         New Game
                     </button>

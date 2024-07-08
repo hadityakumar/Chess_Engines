@@ -6,7 +6,6 @@ import dynamic from 'next/dynamic';
 import { Chess } from 'chess.js';
 import { ToastContainer, toast } from 'react-toastify';
 
-// Dynamically import Chessboard to ensure it runs only on the client side
 const Chessboard = dynamic(() => import('chessboardjsx'), { ssr: false });
 
 const App = () => {
@@ -15,21 +14,21 @@ const App = () => {
     const [fen, setFen] = useState('start');
     const [gameover, setGameover] = useState(false);
     const [winner, setWinner] = useState(null);
-    const [boardWidth, setBoardWidth] = useState(560); // Default width for large screens
+    const [boardWidth, setBoardWidth] = useState(560); 
 
     useEffect(() => {
-        // Update board width based on window size
+       
         const updateBoardWidth = () => {
             setBoardWidth(window.innerWidth < 768 ? 340 : 560);
         };
 
-        // Set initial board width
+        
         updateBoardWidth();
 
-        // Add resize event listener
+        
         window.addEventListener('resize', updateBoardWidth);
 
-        // Clean up the event listener on unmount
+        
         return () => window.removeEventListener('resize', updateBoardWidth);
     }, []);
 
@@ -52,6 +51,7 @@ const App = () => {
 
     const handleMove = async (move) => {
         try {
+            if(game.turn()==='b')   return;
             const moveResult = game.move(move);
             if (moveResult === null) return;
             setFen(game.fen());
@@ -92,15 +92,15 @@ const App = () => {
 
     return (
         <>
-            <div className="flex font-[montserrat] font-extrabold justify-between">
-                <div className='w-[30%] flex flex-col items-center p-10 gap-5'>
-                    <span className='text-black text-xl'>Hello I am Random AI !</span>
-                    <span className='text-black text-lg'>I play random moves</span>
-                    <span className='text-gray-700 text-lg'>How I work?</span>
-                    <span className='text-gray-700'>I find all possible legal moves at a particular position and choose any one of them using RNG (Random Number Generator)</span>
+            <div className="flex flex-col md:flex-row font-[montserrat] font-extrabold justify-between items-center md:items-start p-5">
+                <div className='w-full md:w-[30%] flex flex-col items-center p-5 gap-5'>
+                    <span className='text-black text-xl text-center'>Hello I am Random AI!</span>
+                    <span className='text-black text-lg text-center'>I play random moves</span>
+                    <span className='text-gray-700 text-lg text-center'>How I work?</span>
+                    <span className='text-gray-700 text-center'>I find all possible legal moves at a particular position and choose any one of them using RNG (Random Number Generator)</span>
                 </div>
 
-                <div className='flex flex-col items-center md:p-1 md:m-4'>
+                <div className='flex flex-col items-center md:p-1 md:m-4 relative'>
                     {gameover && (
                         <div style={{
                             width: '100%',
@@ -136,7 +136,7 @@ const App = () => {
                     <ToastContainer />
                 </div>
 
-                <div className='w-[30%] flex justify-center items-center'>
+                <div className='w-full md:w-[30%] flex justify-center items-center mt-5 md:mt-0'>
                     <button onClick={resetGame} className="mt-2 font-[montserrat] md:text-xl text-sm shadow-lg bg-[#a36634] hover:bg-[#5a3a1f] text-white font-bold p-4 border-b-4 border-[#a36634] hover:border-[#5a3a1f] rounded-full hover:shadow-2xl">
                         New Game
                     </button>

@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className="className={`${inter.variable} ${montserrat.variable} ${roboto_mono.variable }`}">
       
       <body className={montserrat.className}>
-        <div className="absolute inset-0 -z-10 min-h-[100%] w-full bg-white [background:radial-gradient(100%_100%_at_50%_10%,#fff_40%,#b58863)]">
+        <div className="absolute inset-0 -z-10 md:min-h-full min-h-fit w-full bg-white [background:radial-gradient(100%_100%_at_50%_10%,#fff_40%,#b58863)]">
           <PageTitleProvider>
             <Navbar />
             {children}

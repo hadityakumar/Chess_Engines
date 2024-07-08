@@ -52,6 +52,7 @@ const App = () => {
 
     const handleMove = async (move) => {
         try {
+            if(game.turn()==='b')   return;
             const moveResult = game.move(move);
             if (moveResult === null) return;
             setFen(game.fen());
@@ -92,16 +93,16 @@ const App = () => {
 
     return (
         <>
-            <div className="flex font-[montserrat] font-extrabold justify-between">
-                <div className='w-[30%] flex flex-col items-center p-10 gap-5'>
-                    <span className='text-black text-xl'>Hi, I am a Machine Learning Model!</span>
-                    <span className='text-black text-lg'>I was trained with 60,000 different chess positions.</span>
-                    <span className='text-gray-700 text-lg'>What is a ML Model?</span>
-                    <span className='text-gray-700'>This Machine learning model, built using TensorFlow Keras, processes chess board positions (FEN strings) and predicts the best possible move by evaluating all potential future states of the board.</span>
+            <div className="flex flex-col md:flex-row font-[montserrat] font-extrabold justify-between items-center md:items-start p-5">
+                <div className='w-full md:w-[30%] flex flex-col items-center p-5 gap-5'>
+                    <span className='text-black text-xl text-center'>Hi, I am a Machine Learning Model!</span>
+                    <span className='text-black text-lg text-center'>I was trained with 60,000 different chess positions.</span>
+                    <span className='text-gray-700 text-lg text-center'>What is a ML Model?</span>
+                    <span className='text-gray-700 text-center'>This Machine learning model, built using TensorFlow Keras, processes chess board positions (FEN strings) and predicts the best possible move by evaluating all potential future states of the board.</span>
                     <a className='text-blue-800' href="https://www.kaggle.com/code/adityakumar2003/chess-ai">Link to Code</a>
                 </div>
 
-                <div className='flex flex-col items-center md:p-1 md:m-4'>
+                <div className='flex flex-col items-center md:p-1 md:m-4 relative'>
                     {gameover && (
                         <div style={{
                             width: '100%',
@@ -137,7 +138,7 @@ const App = () => {
                     <ToastContainer />
                 </div>
 
-                <div className='w-[30%] flex justify-center items-center'>
+                <div className='w-full md:w-[30%] flex justify-center items-center mt-5 md:mt-0'>
                     <button onClick={resetGame} className="mt-2 font-[montserrat] md:text-xl text-sm shadow-lg bg-[#a36634] hover:bg-[#5a3a1f] text-white font-bold p-4 border-b-4 border-[#a36634] hover:border-[#5a3a1f] rounded-full hover:shadow-2xl">
                         New Game
                     </button>
