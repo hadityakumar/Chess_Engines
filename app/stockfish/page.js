@@ -98,8 +98,8 @@ const App = () => {
 
     return (
         <>
-            <div className="flex flex-col md:flex-row font-[montserrat] font-extrabold justify-between items-center md:items-start p-5">
-                <div className='w-full md:w-[30%] flex flex-col items-center p-5 gap-5'>
+            <div className="flex flex-col md:flex-row font-[montserrat] font-extrabold justify-between items-center md:items-start md:p-5 p-1">
+                <div className='w-full md:w-[30%] flex flex-col items-center md:p-5 p-1 gap-5'>
                     <span className='text-black md:text-xl text-base text-center'>Hello I am StockFish Chess Engine!</span>
                     <span className='text-black md:text-lg text-sm text-center'>I am integrated with the Stockfish python module.</span>
                     <span className='text-gray-700 md:text-lg text-base text-center'>What is StockFish?</span>

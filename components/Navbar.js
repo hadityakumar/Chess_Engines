@@ -13,7 +13,7 @@ const Navbar = () => {
                     </div>
 
                     <div className="flex-1 text-center">
-                          <span className='md:text-3xl text-lg text-white'>{pageTitle}</span>
+                          <span className='md:text-3xl text-xl text-white'>{pageTitle}</span>
                     </div>
                 </div>
     </>

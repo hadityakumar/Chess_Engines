@@ -92,8 +92,8 @@ const App = () => {
 
     return (
         <>
-            <div className="flex flex-col md:flex-row font-[montserrat] font-extrabold justify-between items-center md:items-start p-5">
-                <div className='w-full md:w-[30%] flex flex-col items-center p-5 gap-5'>
+            <div className="flex flex-col md:flex-row font-[montserrat] font-extrabold justify-between items-center md:items-start md:p-5 p-1">
+                <div className='w-full md:w-[30%] flex flex-col items-center md:p-5 gap-5 p-1'>
                     <span className='text-black md:text-xl text-base text-center'>Hello I am Random AI !</span>
                     <span className='text-black md:text-lg text-sm text-center'>I play random moves</span>
                     <span className='text-gray-700 md:text-lg text-base text-center'>How I work?</span>
