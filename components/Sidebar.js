@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePageTitle } from '@/context/PageTitleContext.js';
 import {
     IconButton,
@@ -48,9 +49,11 @@ export function SidebarWithBurgerMenu() {
                     className="h-[calc(100vh-2rem)] w-full p-4"
                 >
                     <div className="mb-2 flex items-center gap-4 p-4">
-                        <img
-                            src="board.svg"
+                        <Image
+                            src="/board.svg"
                             alt="brand"
+                            width={32}
+                            height={32}
                             className="h-8 w-8"
                         />
                         <Typography variant="h5" color="blue-gray">
@@ -62,12 +65,13 @@ export function SidebarWithBurgerMenu() {
                         <Link href="/">
                             <ListItem onClick={() => handleLinkClick('Chess Engines')} className="text-black">
                                 <ListItemPrefix>
-                                <img
-                                        src="home.svg"
+                                    <Image
+                                        src="/home.svg"
                                         alt="brand"
+                                        width={32}
+                                        height={32}
                                         className="h-8 w-8"
                                     />
-
                                 </ListItemPrefix>
                                 Home
                             </ListItem>
@@ -78,12 +82,13 @@ export function SidebarWithBurgerMenu() {
                         <Link href="/random">
                             <ListItem onClick={() => handleLinkClick('Random Chess Engine')} className="text-black">
                                 <ListItemPrefix>
-                                    <img
-                                        src="pawn.svg"
+                                    <Image
+                                        src="/pawn.svg"
                                         alt="brand"
+                                        width={32}
+                                        height={32}
                                         className="h-8 w-8"
                                     />
-
                                 </ListItemPrefix>
                                 Random Engine
                             </ListItem>
@@ -91,9 +96,11 @@ export function SidebarWithBurgerMenu() {
                         <Link href="/stockfish">
                             <ListItem onClick={() => handleLinkClick('StockFish Chess Engine')} className="text-black">
                                 <ListItemPrefix>
-                                    <img
-                                        src="horse.svg"
+                                    <Image
+                                        src="/horse.svg"
                                         alt="brand"
+                                        width={32}
+                                        height={32}
                                         className="h-8 w-8"
                                     />
                                 </ListItemPrefix>
@@ -103,9 +110,11 @@ export function SidebarWithBurgerMenu() {
                         <Link href="/ml-model">
                             <ListItem onClick={() => handleLinkClick('Trained ML Model')} className="text-black items-center">
                                 <ListItemPrefix>
-                                    <img
-                                        src="queen.svg"
+                                    <Image
+                                        src="/queen.svg"
                                         alt="brand"
+                                        width={32}
+                                        height={32}
                                         className="h-8 w-8"
                                     />
                                 </ListItemPrefix>
