@@ -22,20 +22,18 @@ const roboto_mono = Roboto_Mono({
 
 export default function RootLayout({ children }) {
   return (
-
-
-    <html lang="en" className="className={`${inter.variable} ${montserrat.variable} ${roboto_mono.variable }`}">
-      
-      <body className={montserrat.className}>
-        <div className="absolute inset-0 -z-10 md:min-h-full min-h-fit w-full bg-white [background:radial-gradient(100%_100%_at_50%_10%,#fff_40%,#b58863)]">
+    <html lang="en" className={`${inter.variable} ${montserrat.variable} ${roboto_mono.variable}`} style={{ height: '100%' }}>
+      <body className={montserrat.className} style={{ height: '100%', margin: 0 }}>
+        <div className="min-h-screen w-full bg-white [background:radial-gradient(100%_100%_at_50%_10%,#fff_40%,#b58863)] flex flex-col">
           <PageTitleProvider>
             <Navbar />
-            {children}
-            <Footer/>
+            <div className="flex-grow">
+              {children}
+            </div>
+            <Footer />
           </PageTitleProvider>
         </div>
       </body>
-
     </html>
   );
 }
