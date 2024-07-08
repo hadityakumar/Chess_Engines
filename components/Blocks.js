@@ -80,7 +80,7 @@ const Blocks = () => {
                                 <div className="p-6">
                                     <h2 className="tracking-widest text-xs title-font font-medium text-red-800 mb-1">Hard</h2>
                                     <h1 className="title-font text-lg font-medium text-gray-900 mb-3">StockFish Chess Engine</h1>
-                                    <p className="leading-relaxed mb-3 text-gray-600">Integrated with one of the World's best Chess Engine - StockFish.</p>
+                                    <p className="leading-relaxed mb-3 text-gray-600">Integrated with one of the World&apos;s best Chess Engine - StockFish.</p>
                                     <div className="flex items-center flex-wrap">
                                         <span className="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">PLAY NOW
                                             <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
