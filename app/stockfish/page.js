@@ -100,10 +100,10 @@ const App = () => {
         <>
             <div className="flex flex-col md:flex-row font-[montserrat] font-extrabold justify-between items-center md:items-start p-5">
                 <div className='w-full md:w-[30%] flex flex-col items-center p-5 gap-5'>
-                    <span className='text-black text-xl text-center'>Hello I am StockFish Chess Engine!</span>
-                    <span className='text-black text-lg text-center'>I am integrated with the Stockfish python module.</span>
-                    <span className='text-gray-700 text-lg text-center'>What is StockFish?</span>
-                    <span className='text-gray-700 text-center'>Stockfish is a powerful open-source chess engine known for its strong positional play and tactical prowess, used widely in competitive chess and analysis. It evaluates millions of positions per second to suggest optimal moves based on complex algorithms and deep calculation.</span>
+                    <span className='text-black md:text-xl text-base text-center'>Hello I am StockFish Chess Engine!</span>
+                    <span className='text-black md:text-lg text-sm text-center'>I am integrated with the Stockfish python module.</span>
+                    <span className='text-gray-700 md:text-lg text-base text-center'>What is StockFish?</span>
+                    <span className='text-gray-700 md:text-base text-sm text-center'>Stockfish is a powerful open-source chess engine known for its strong positional play and tactical prowess, used widely in competitive chess and analysis. It evaluates millions of positions per second to suggest optimal moves based on complex algorithms and deep calculation.</span>
                 </div>
 
                 <div className='flex flex-col items-center md:p-1 md:m-4 relative'>
